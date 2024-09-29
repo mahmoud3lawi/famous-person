@@ -56,14 +56,14 @@ class _FamousPersonState extends State<FamousPerson> {
           IconButton(
             icon: Icon(Icons.favorite, color: kPrimaryColor),
             onPressed: () async {
-              // Navigate to the favorite screen and wait for a result
+              
               await Navigator.push(
                 context,
                 MaterialPageRoute(
                   builder: (context) => FavoriteScreen(favoritePersons: favoritePersons),
                 ),
               );
-              // Rebuild to reflect any changes in the favoritePersons list
+              
               setState(() {});
             },
           ),
