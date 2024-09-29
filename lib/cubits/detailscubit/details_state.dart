@@ -1,6 +1,15 @@
-part of 'details_cubit.dart';
+class PersonDetailsState {}
 
+class PersonDetailsLoading extends PersonDetailsState {}
 
-sealed class DetailsState {}
+class PersonDetailsLoaded extends PersonDetailsState {
+  final Map<String, dynamic> personDetails;
+  final List<dynamic> personImages;
 
-final class DetailsInitial extends DetailsState {}
+  PersonDetailsLoaded(this.personDetails, this.personImages);
+}
+
+class PersonDetailsError extends PersonDetailsState {
+  final String error;
+  PersonDetailsError(this.error);
+}

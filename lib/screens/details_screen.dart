@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:traning_project/constant.dart';
 import 'package:traning_project/cubits/detailscubit/details_cubit.dart';
+import 'package:traning_project/cubits/detailscubit/details_state.dart';
 import 'package:traning_project/services/api_service.dart';
 import 'package:traning_project/screens/image_screen.dart';
 

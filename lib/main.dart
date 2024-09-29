@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:traning_project/cubits/favouritecubit/favourite_cubit.dart';
 import 'package:traning_project/cubits/personcubit/person_cubit.dart';
 import 'package:traning_project/screens/famous_person.dart';
 import 'package:traning_project/services/api_service.dart';
@@ -11,9 +10,6 @@ void main() {
       providers: [
         BlocProvider<PersonCubit>(
           create: (context) => PersonCubit(ApiService()),
-        ),
-        BlocProvider<FavoriteCubit>(
-          create: (context) => FavoriteCubit(),
         ),
       ],
       child:  Training(),

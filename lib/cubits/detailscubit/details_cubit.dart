@@ -1,21 +1,8 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:traning_project/cubits/detailscubit/details_state.dart';
 import 'package:traning_project/services/api_service.dart';
 
-class PersonDetailsState {}
 
-class PersonDetailsLoading extends PersonDetailsState {}
-
-class PersonDetailsLoaded extends PersonDetailsState {
-  final Map<String, dynamic> personDetails;
-  final List<dynamic> personImages;
-
-  PersonDetailsLoaded(this.personDetails, this.personImages);
-}
-
-class PersonDetailsError extends PersonDetailsState {
-  final String error;
-  PersonDetailsError(this.error);
-}
 
 class PersonDetailsCubit extends Cubit<PersonDetailsState> {
   final ApiService apiService;
